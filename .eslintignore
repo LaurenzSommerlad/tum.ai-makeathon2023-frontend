@@ -1,0 +1,7 @@
+.cache/
+public/
+node_modules/
+.idea/
+.vscode/
+schema.json
+src/html.js
