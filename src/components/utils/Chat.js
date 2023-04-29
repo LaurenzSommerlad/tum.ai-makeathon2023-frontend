@@ -117,7 +117,7 @@ export default function Chat() {
                   id="message"
                   name="message"
                   required
-                  className="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
+                  className="flex w-full border rounded-xl focus:outline-none focus:border-violet-600 pl-4 h-10"
                 />
                 <button
                   type="button"
@@ -143,7 +143,7 @@ export default function Chat() {
             <div className="ml-4">
               <button
                 type="submit"
-                className="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
+                className="flex items-center justify-center bg-violet-500 hover:bg-violet-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
               >
                 <span>Send</span>
                 <span className="ml-2">

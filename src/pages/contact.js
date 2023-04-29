@@ -39,7 +39,7 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
             {/* Contact information */}
-            <div className="relative overflow-hidden py-10 px-6 bg-indigo-600 sm:px-10 xl:p-12">
+            <div className="relative overflow-hidden py-10 px-6 bg-violet-600 sm:px-10 xl:p-12">
               <div
                 className="absolute inset-0 pointer-events-none sm:hidden"
                 aria-hidden="true"
@@ -142,13 +142,13 @@ export default function Contact() {
               <h3 className="text-lg font-medium text-white">
                 Contact information
               </h3>
-              <p className="mt-6 text-base text-indigo-50 max-w-3xl">
+              <p className="mt-6 text-base text-violet-50 max-w-3xl">
                 Need to get in touch with the team? Feel free to leave us any
                 questions concerning the challenge or our solution!
               </p>
               <dl className="mt-8 space-y-6">
                 <dt className="sr-only">Postal address</dt>
-                <dd className="text-base text-indigo-50">
+                <dd className="text-base text-violet-50">
                   <p>TUM.ai Makeathon 2023 cooler-name Team</p>
                   <p>Boltzmannstraße 15</p>
                   <p>85748 Garching bei München</p>
@@ -156,9 +156,9 @@ export default function Contact() {
                 <dt>
                   <span className="sr-only">Phone number</span>
                 </dt>
-                <dd className="flex text-base text-indigo-50">
+                <dd className="flex text-base text-violet-50">
                   <PhoneIcon
-                    className="flex-shrink-0 w-6 h-6 text-indigo-200"
+                    className="flex-shrink-0 w-6 h-6 text-violet-200"
                     aria-hidden="true"
                   />
                   <span className="ml-3">+49 89 289 01</span>
@@ -166,9 +166,9 @@ export default function Contact() {
                 <dt>
                   <span className="sr-only">Email</span>
                 </dt>
-                <dd className="flex text-base text-indigo-50">
+                <dd className="flex text-base text-violet-50">
                   <MailIcon
-                    className="flex-shrink-0 w-6 h-6 text-indigo-200"
+                    className="flex-shrink-0 w-6 h-6 text-violet-200"
                     aria-hidden="true"
                   />
                   <span className="ml-3">makeathon@tum-ai.com</span>
@@ -177,7 +177,7 @@ export default function Contact() {
               <ul className="mt-8 flex space-x-12">
                 <li>
                   <a
-                    className="text-indigo-200 hover:text-indigo-100"
+                    className="text-violet-200 hover:text-violet-100"
                     href="https://www.linkedin.com/company/tum-ai/"
                     target="_blank"
                     rel="noreferrer"
@@ -201,7 +201,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <a
-                    className="text-indigo-200 hover:text-indigo-100"
+                    className="text-violet-200 hover:text-violet-100"
                     href="https://github.com/LaurenzSommerlad/tum.ai-makeathon2023"
                     target="_blank"
                     rel="noreferrer"
@@ -225,7 +225,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <a
-                    className="text-indigo-200 hover:text-indigo-100"
+                    className="text-violet-200 hover:text-violet-100"
                     href="https://goo.gl/maps/24BHtLJCuAZnwkDZ7"
                     target="_blank"
                     rel="noreferrer"
@@ -272,7 +272,7 @@ export default function Contact() {
                       id="firstName"
                       required
                       autoComplete="given-name"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function Contact() {
                       id="lastName"
                       required
                       autoComplete="family-name"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -308,7 +308,7 @@ export default function Contact() {
                       type="email"
                       required
                       autoComplete="email"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -330,7 +330,7 @@ export default function Contact() {
                       name="phone"
                       id="phone"
                       autoComplete="tel"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded-md"
                       aria-describedby="phone-optional"
                     />
                   </div>
@@ -348,7 +348,7 @@ export default function Contact() {
                       name="subject"
                       id="subject"
                       required
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-violet-500 focus:border-violet-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -369,7 +369,7 @@ export default function Contact() {
                       id="message"
                       name="message"
                       rows={4}
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-violet-500 focus:border-violet-500 border border-gray-300 rounded-md"
                       aria-describedby="message-max"
                       defaultValue=""
                       required
@@ -379,7 +379,7 @@ export default function Contact() {
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 sm:w-auto"
                   >
                     Submit
                   </button>

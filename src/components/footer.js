@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Icon from "../images/icon.jpg";
+import Icon from "../images/fullLogo.png";
 import Newsletter from "./utils/Newsletter";
 
 const footerNavigation = {
@@ -108,8 +108,11 @@ export default function Footer() {
             {/* Image section */}
             <div className="space-y-8 xl:col-span-1">
               <div className="flex text-4xl font-bold items-center">
-                <h1 className="align-middle">Makeathon-23</h1>
-                <img className="h-14 w-auto" src={Icon} alt="Team Icon" />
+                <img
+                  className="h-40 w-auto -mb-24 -ml-7"
+                  src={Icon}
+                  alt="Team Icon"
+                />
               </div>
               <div className="text-warm-gray-500 text-2xl">
                 Change the world

@@ -1,4 +1,7 @@
 import React from "react";
+import AI from "../../images/icon.png";
+import User from "../../images/user.png";
+import CProfileImage from "./CProfileImage";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -18,8 +21,19 @@ export default function Chat({ ai, message }) {
           "flex items-center"
         )}
       >
-        <div className="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0">
-          {ai ? "A" : "U"}
+        <div
+          className={classNames(
+            "flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0",
+            ai ? "bg-white" : ""
+          )}
+        >
+          <CProfileImage
+            image={ai ? AI : User}
+            className={classNames(
+              "rounded-full object-cover",
+              ai ? "h-16 w-16" : "h-20 w-20"
+            )}
+          />
         </div>
         <div
           className={classNames(

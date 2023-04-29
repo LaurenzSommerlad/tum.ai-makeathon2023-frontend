@@ -42,8 +42,9 @@ module.exports = {
       green: colors.emerald,
       blue: colors.blue,
       indigo: colors.indigo,
-      purple: colors.violet,
+      purple: colors.purple,
       pink: colors.pink,
+      violet: colors.violet,
       buttonColor: {
         loginButton: "#F00",
         mildButton: "#EA5455",
