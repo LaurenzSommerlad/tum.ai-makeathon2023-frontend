@@ -12,7 +12,7 @@ import {
 } from "@heroicons/react/outline";
 import { Link } from "gatsby";
 import { useTranslation } from "react-i18next";
-import Icon from "../images/icon.jpg";
+import Icon from "../images/fullLogo.png";
 
 export default function NavigationHeader({ open, setOpen }) {
   const { t } = useTranslation();
@@ -142,7 +142,7 @@ export default function NavigationHeader({ open, setOpen }) {
                   <Link to="/">
                     <span className="sr-only">Workflow</span>
                     <img
-                      className="h-14 w-auto"
+                      className="h-36 w-auto"
                       src={Icon}
                       alt="My Potato Logo"
                     />
@@ -189,21 +189,21 @@ export default function NavigationHeader({ open, setOpen }) {
                   <img
                     src={Icon}
                     alt="My Potato Logo"
-                    className="h-14 w-auto"
+                    className="h-20 w-auto"
                   />
                 </Link>
 
                 <div className="flex-1 flex items-center justify-end">
                   <Link
                     to="/login"
-                    className="text-gray-600 hover:text-indigo-600 px-4 py-2 text-base font-medium rounded-md"
+                    className="text-gray-600 hover:text-violet-600 px-4 py-2 text-base font-medium rounded-md"
                   >
                     {t("index.signin")}
                   </Link>
                   <div className="flex items-center">
                     <Link
                       to="/createAccount"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-900 focus:ring-indigo-600"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-violet-900 focus:ring-violet-600"
                     >
                       {t("index.createAccount")}
                     </Link>

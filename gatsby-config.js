@@ -36,7 +36,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.white,
         display: `minimal-ui`,
-        icon: `src/images/icon.jpg`,
+        icon: `src/images/icon.png`,
       },
     },
     {
