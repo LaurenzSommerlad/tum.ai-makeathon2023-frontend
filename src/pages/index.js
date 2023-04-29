@@ -7,6 +7,7 @@ import backgroundImage from "../images/backgroundImage.jpg";
 import CompanyInfo from "../components/utils/CompanyInfo";
 import SEO from "../components/seo";
 import { GET_TEAM } from "../graphql/team/teamGraphQL";
+import Chat from "../components/utils/Chat";
 
 export default function IndexPage() {
   const { t } = useTranslation();
@@ -130,6 +131,7 @@ export default function IndexPage() {
           Makeathon 2023
         </h2>
         <CompanyInfo />
+        <Chat />
       </section>
     </div>
   );
