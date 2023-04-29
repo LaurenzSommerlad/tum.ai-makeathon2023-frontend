@@ -26,6 +26,11 @@ module.exports = {
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
     },
+    extend: {
+      maxHeight: {
+        128: "32rem",
+      },
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
