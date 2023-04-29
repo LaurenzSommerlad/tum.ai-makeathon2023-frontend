@@ -3,10 +3,10 @@ import Message from "./Message";
 
 export default function Chat() {
   const [json, setJson] = useState({ context: [] });
-  const textField = useRef(null);
+  const lastMessage = useRef(null);
   const getJson = async (x) => {
     console.log("hallo");
-    await fetch("http://localhost:1234/ask", {
+    await fetch(process.env.API_ENDPOINT, {
       method: "POST",
       body: JSON.stringify({
         context: x?.context,
@@ -43,7 +43,12 @@ export default function Chat() {
         data.context[data.context.length - 1] = lastElement;
         setJson(data);
         console.log(data);
-        getJson(data).then(() => textField.current.scrollIntoView());
+        getJson(data).then(() =>
+          lastMessage.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          })
+        );
       }
     }
     e.target.message.value = "";
@@ -51,10 +56,10 @@ export default function Chat() {
 
   return (
     <div>
-      <div className="flex flex-col flex-auto h-full p-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-auto">
-        <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4 pb-40">
-          <div className="flex flex-col h-full overflow-x-auto mb-4">
-            <div className="flex flex-col h-full">
+      <div className="flex flex-col flex-auto h-full p-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4 overflow-y-auto">
+          <div className="flex flex-col h-full overflow-x-auto pb-4">
+            <div className="flex flex-col h-full max-h-128 pb-52">
               <div className="grid grid-cols-12 gap-y-2">
                 {json?.context?.map((context) => {
                   return [
@@ -73,6 +78,11 @@ export default function Chat() {
                     ) : null,
                   ];
                 })}
+                <div className="pb-52" />
+                <div
+                  className="col-start-1 col-end-8 sm:pt-60 md:p-6"
+                  ref={lastMessage}
+                />
               </div>
             </div>
           </div>
@@ -103,7 +113,6 @@ export default function Chat() {
             <div className="flex-grow ml-4">
               <div className="relative w-full">
                 <input
-                  ref={textField}
                   type="text"
                   id="message"
                   name="message"
