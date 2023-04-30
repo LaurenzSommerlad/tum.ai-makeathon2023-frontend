@@ -32,7 +32,7 @@ export default function Member({ location }) {
             <Link to="/team">
               <button
                 type="button"
-                className="flex flex-row items-center text-center w-fit pr-2 h-7 bg-indigo-500 border border-transparent rounded-md text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                className="flex flex-row items-center text-center w-fit pr-2 h-7 bg-violet-500 border border-transparent rounded-md text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-violet-500"
               >
                 <BackspaceIcon className="w-5 h-5 text-white m-2" />
                 <p>{t("nav.back")}</p>
@@ -55,7 +55,7 @@ export default function Member({ location }) {
                 <div className="ml-4 pl-4 border-l border-gray-300">
                   <h2 className="sr-only">{/* todo */}</h2>
                   <div className="flex items-center">
-                    <p className="ml-2 text-sm text-indigo-500 hover:text-indigo-700">
+                    <p className="ml-2 text-sm text-violet-500 hover:text-violet-700">
                       {/* todo */}
                     </p>
                   </div>
@@ -72,7 +72,7 @@ export default function Member({ location }) {
               </div>
               <div className="mt-6 flex items-center">
                 <HashtagIcon
-                  className="flex-shrink-0 w-5 h-5 text-indigo-500"
+                  className="flex-shrink-0 w-5 h-5 text-violet-500"
                   aria-hidden="true"
                 />
                 <p className="ml-2 text-m text-gray-500">
@@ -119,7 +119,7 @@ export default function Member({ location }) {
                   <Link to="/contact">
                     <button
                       type="button"
-                      className="w-full bg-indigo-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                      className="w-full bg-violet-500 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-violet-500"
                     >
                       {t("nav.contact")}
                     </button>

@@ -7,6 +7,7 @@ import backgroundImage from "../images/backgroundImage.jpg";
 import CompanyInfo from "../components/utils/CompanyInfo";
 import SEO from "../components/seo";
 import { GET_TEAM } from "../graphql/team/teamGraphQL";
+import Chat from "../components/utils/Chat";
 
 export default function IndexPage() {
   const { t } = useTranslation();
@@ -64,7 +65,7 @@ export default function IndexPage() {
             <div className="mt-4 sm:mt-6">
               <Link
                 to="/team"
-                className="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
+                className="inline-block bg-violet-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-violet-700"
               >
                 {t("index.team")}
               </Link>
@@ -130,6 +131,7 @@ export default function IndexPage() {
           Makeathon 2023
         </h2>
         <CompanyInfo />
+        <Chat />
       </section>
     </div>
   );

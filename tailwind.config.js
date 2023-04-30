@@ -26,6 +26,11 @@ module.exports = {
     fontFamily: {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
     },
+    extend: {
+      maxHeight: {
+        128: "32rem",
+      },
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -37,8 +42,9 @@ module.exports = {
       green: colors.emerald,
       blue: colors.blue,
       indigo: colors.indigo,
-      purple: colors.violet,
+      purple: colors.purple,
       pink: colors.pink,
+      violet: colors.violet,
       buttonColor: {
         loginButton: "#F00",
         mildButton: "#EA5455",

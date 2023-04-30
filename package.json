@@ -24,7 +24,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.12",
+    "@apollo/client": "^3.7.13",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^1.0.6",
     "@mdx-js/react": "^2.3.0",
@@ -41,18 +41,18 @@
     "i18next": "^22.4.15",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.0",
-    "js-cookie": "^3.0.4",
+    "js-cookie": "^3.0.5",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^12.2.0",
+    "react-i18next": "^12.2.2",
     "react-select": "^5.7.2",
     "react-toastify": "^9.1.2",
     "showdown": "^2.1.0",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
     "@graphql-eslint/eslint-plugin": "^3.18.0",

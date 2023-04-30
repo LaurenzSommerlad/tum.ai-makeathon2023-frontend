@@ -11,10 +11,6 @@ export const wrapPageElement = ({ element }) => {
     element.props.location.pathname !== "/forgotPassword" &&
     element.props.location.pathname !== "/resetPassword" &&
     element.props.location.pathname !== "/" &&
-    element.props.location.pathname !== "/articles" &&
-    element.props.location.pathname !== "/article" &&
-    element.props.location.pathname !== "/articles/" &&
-    element.props.location.pathname !== "/article/" &&
     element.props.location.pathname !== "/team" &&
     element.props.location.pathname !== "/member" &&
     element.props.location.pathname !== "/team/" &&
@@ -25,6 +21,8 @@ export const wrapPageElement = ({ element }) => {
     element.props.location.pathname !== "/contact/" &&
     element.props.location.pathname !== "/faq" &&
     element.props.location.pathname !== "/faq/" &&
+    element.props.location.pathname !== "/caht" &&
+    element.props.location.pathname !== "/chat/" &&
     element.props.location.pathname !== "/findus" &&
     element.props.location.pathname !== "/findus/" &&
     element.props.location.pathname !== "/legal" &&
