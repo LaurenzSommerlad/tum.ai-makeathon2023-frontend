@@ -38,7 +38,7 @@ export default function Chat({ ai, message }) {
         <div
           className={classNames(
             ai ? "ml-3 bg-white" : "mr-3 bg-indigo-100",
-            "relative text-m py-2 px-4 shadow rounded-xl"
+            "relative text-m py-2 px-4 shadow rounded-xl whitespace-pre-line"
           )}
         >
           <div>{message}</div>

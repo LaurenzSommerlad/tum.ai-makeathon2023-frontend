@@ -1,22 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "gatsby";
 import Message from "./Message";
 
 export default function Chat() {
   const [json, setJson] = useState({ context: [] });
+  const [pdf, setPdf] = useState();
+  const [file, setFile] = useState();
   const lastMessage = useRef(null);
+
+  const handleFileChange = (e) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+      document.getElementById("message").value =
+        e.target.files[0].name + e.target.files[0].type;
+    }
+    console.log(file);
+  };
   const getJson = async (x) => {
-    console.log("hallo");
-    await fetch(process.env.API_ENDPOINT, {
-      method: "POST",
-      body: JSON.stringify({
-        context: x?.context,
-      }),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
+    await fetch(
+      x?.report === 1
+        ? process.env.API_ENDPOINT_CHAT
+        : process.env.API_ENDPOINT_ASK,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          context: x?.context,
+        }),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
+        if (data?.report === 1 && data?.filename !== null) {
+          setPdf(data?.filename);
+        }
         setJson(data);
       })
       .catch((err) => {
@@ -31,18 +50,14 @@ export default function Chat() {
   }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("abc");
     const data = json;
     if (data?.context) {
-      console.log("bbb");
       const lastElement = data?.context[data.context.length - 1];
       console.log(lastElement);
       if (lastElement) {
-        console.log("ccc");
         lastElement.response = e.target.message.value;
         data.context[data.context.length - 1] = lastElement;
         setJson(data);
-        console.log(data);
         getJson(data).then(() =>
           lastMessage.current.scrollIntoView({
             behavior: "smooth",
@@ -90,25 +105,31 @@ export default function Chat() {
         <form onSubmit={handleSubmit}>
           <div className="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4">
             <div>
-              <button
-                type="button"
-                className="flex items-center justify-center text-gray-400 hover:text-gray-600"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
-                  />
-                </svg>
-              </button>
+              <label htmlFor="file">
+                <div className="flex items-center justify-center text-gray-400 hover:text-gray-600">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                    />
+                  </svg>
+                </div>
+                <input
+                  id="file"
+                  type="file"
+                  name="file"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+              </label>
             </div>
             <div className="flex-grow ml-4">
               <div className="relative w-full">
@@ -166,6 +187,19 @@ export default function Chat() {
             </div>
           </div>
         </form>
+        {pdf ? (
+          <div className="flex flex-col items-center">
+            <div className="mt-4 sm:mt-6">
+              <Link
+                target="_blank"
+                to={`${process.env.API_ENDPOINT_PDF}?filename=${pdf}`}
+                className="inline-block bg-violet-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-violet-700"
+              >
+                Download
+              </Link>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
