@@ -26,6 +26,12 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'http://localhost:1337/graphql'
+      }
+    },
     `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-plugin-manifest`,

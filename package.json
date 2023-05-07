@@ -24,7 +24,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.13",
+    "@apollo/client": "^3.7.14",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^1.0.6",
     "@mdx-js/react": "^2.3.0",
@@ -33,6 +33,7 @@
     "apollo-upload-client": "^17.0.0",
     "dotenv": "^16.0.3",
     "gatsby": "^5.9.0",
+    "gatsby-plugin-apollo": "^4.0.3",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-mdx": "^5.9.0",
     "gatsby-plugin-offline": "^6.9.0",
