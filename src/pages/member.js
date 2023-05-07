@@ -127,7 +127,7 @@ export default function Member({ location }) {
                 </div>
                 <div className="mt-6 text-center">
                   <a
-                    href="https://openai.com/safety"
+                    href={member?.linkedin}
                     className="group inline-flex text-base font-medium text-gray-500 hover:text-gray-700"
                   >
                     <span className="sr-only">LinkedIn</span>

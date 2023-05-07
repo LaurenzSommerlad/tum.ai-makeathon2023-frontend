@@ -10,6 +10,7 @@ export const GET_MEMBER_BY_ID = gql`
           lastName
           shortDescription
           description
+          linkedin
           json
           image {
             data {

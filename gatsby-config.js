@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-apollo',
       options: {
-        uri: 'http://localhost:1337/graphql'
+        uri: process.env.GATSBY_STRAPI_GRAPHQL
       }
     },
     `gatsby-plugin-eslint`,
