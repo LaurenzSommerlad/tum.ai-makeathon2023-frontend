@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-apollo',
       options: {
-        uri: 'http://localhost:1337/graphql'
+        uri: "https://tum-ai-makeathon2023-backend.herokuapp.com/graphql"
       }
     },
     `gatsby-plugin-eslint`,

@@ -1,7 +1,7 @@
 module.exports = {
   client: {
     service: {
-      url: "http://localhost:1337/graphql",
+      url: "https://tum-ai-makeathon2023-backend.herokuapp.com/graphql",
     },
   },
 };

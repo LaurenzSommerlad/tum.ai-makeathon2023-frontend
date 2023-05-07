@@ -49,7 +49,7 @@ const link = ApolloLink.from([
   errorLink,
   authLink.concat(
     createUploadLink({
-      uri: process.env.GATSBY_STRAPI_GRAPHQL,
+      uri: "https://tum-ai-makeathon2023-backend.herokuapp.com/graphql",
     })
   ),
 ]);
