@@ -26,6 +26,12 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: process.env.GATSBY_STRAPI_GRAPHQL
+      }
+    },
     `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-plugin-manifest`,
