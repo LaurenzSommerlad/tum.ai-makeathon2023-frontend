@@ -203,7 +203,7 @@ export default function NavigationHeader({ open, setOpen }) {
                   <div className="flex items-center">
                     <Link
                       to="/createAccount"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-violet-900 focus:ring-violet-600"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-violet-900 focus:ring-violet-600 truncate"
                     >
                       {t("index.createAccount")}
                     </Link>

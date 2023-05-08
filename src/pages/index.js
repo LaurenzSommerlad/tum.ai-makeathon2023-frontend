@@ -12,6 +12,9 @@ import Chat from "../components/utils/Chat";
 export default function IndexPage() {
   const { t } = useTranslation();
   const { data } = useQuery(GET_TEAM, {
+    variables: {
+      limit: 3,
+    },
     onError: () => {
       toast.error(`${t("system.load.error")}`);
     },
@@ -93,13 +96,7 @@ export default function IndexPage() {
                   >
                     <div className="absolute inset-0 overflow-hidden group-hover:opacity-75">
                       <img
-                        src={
-                          item.attributes?.image?.data?.attributes?.url
-                            ? process.env.GATSBY_STRAPI_URL +
-                              // eslint-disable-next-line no-unsafe-optional-chaining
-                              item.attributes?.image?.data?.attributes?.url
-                            : null
-                        }
+                        src={item.attributes?.image?.data?.attributes?.url}
                         alt={item.attributes?.shortDescription}
                         className="w-full h-full object-center object-cover"
                       />

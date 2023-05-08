@@ -192,7 +192,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-100 py-10 text-center">
-          © {new Date().getFullYear()} • TUM.ai Makeathon 2023 cooler-name Team
+          © {new Date().getFullYear()} • TUM.ai Makeathon 2023 CanAI
         </div>
       </div>
     </footer>
