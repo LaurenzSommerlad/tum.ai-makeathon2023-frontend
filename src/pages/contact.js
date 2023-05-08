@@ -149,7 +149,7 @@ export default function Contact() {
               <dl className="mt-8 space-y-6">
                 <dt className="sr-only">Postal address</dt>
                 <dd className="text-base text-violet-50">
-                  <p>TUM.ai Makeathon 2023 cooler-name Team</p>
+                  <p>CanAI TUM.ai Makeathon 2023</p>
                   <p>Boltzmannstraße 15</p>
                   <p>85748 Garching bei München</p>
                 </dd>

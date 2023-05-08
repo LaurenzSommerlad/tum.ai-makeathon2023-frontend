@@ -86,13 +86,7 @@ export default function Member({ location }) {
           <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center mb-8">
             <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
               <img
-                src={
-                  member?.image?.data?.attributes?.url
-                    ? process.env.GATSBY_STRAPI_URL +
-                      // eslint-disable-next-line no-unsafe-optional-chaining
-                      member?.image?.data?.attributes?.url
-                    : null
-                }
+                src={member?.image?.data?.attributes?.url}
                 alt={member?.shortDescription}
                 className="w-full h-full object-center object-cover"
               />

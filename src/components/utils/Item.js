@@ -7,13 +7,7 @@ export default function Item({ item, type }) {
       <div className="group relative bg-white border border-gray-200 rounded-lg flex flex-col overflow-hidden">
         <div className="aspect-w-3 aspect-h-4 bg-gray-200 group-hover:opacity-75 sm:aspect-none sm:h-96">
           <img
-            src={
-              item.attributes?.image?.data?.attributes?.url
-                ? process.env.GATSBY_STRAPI_URL +
-                  // eslint-disable-next-line no-unsafe-optional-chaining
-                  item.attributes?.image?.data?.attributes?.url
-                : null
-            }
+            src={item.attributes?.image?.data?.attributes?.url}
             alt={item.attributes?.shortDescription}
             className="w-full h-full object-center object-cover sm:w-full sm:h-full"
           />
